@@ -1,9 +1,10 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Info, MessagesSquare } from "lucide-react";
+import { ArrowLeft, Info, MessagesSquare } from "lucide-react";
 import { useListConversationsQuery } from "@/redux/api/conversationsApi";
-import { useAppSelector } from "@/redux/hooks";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import { activeConversationSet } from "@/redux/slice/uiSlice";
 import { UserAvatar } from "@/components/shared/UserAvatar";
 import { EmptyState } from "@/components/shared/EmptyState";
 import { MessageList } from "@/components/chat/MessageList";
@@ -11,8 +12,10 @@ import { MessageInput } from "@/components/chat/MessageInput";
 import { GroupInfoDialog } from "@/components/chat/GroupInfoDialog";
 import { Button } from "@/components/ui/button";
 import { getConversationTitle, type ConversationListItem } from "@/types";
+import { cn } from "@/lib/utils";
 
 export function ChatPanel() {
+  const dispatch = useAppDispatch();
   const activeConversationId = useAppSelector((state) => state.ui.activeConversationId);
   const currentUserId = useAppSelector((state) => state.auth.user?._id);
   const { data: conversations } = useListConversationsQuery();
@@ -40,12 +43,14 @@ export function ChatPanel() {
 
   if (!activeConversationId || !mergedConversation) {
     return (
-      <EmptyState
-        icon={MessagesSquare}
-        title="Select a conversation"
-        description="Choose an existing conversation or start a new one to begin chatting."
-        className="flex-1"
-      />
+      <div className="hidden md:flex h-full flex-1 flex-col items-center justify-center bg-surface-soft">
+        <EmptyState
+          icon={MessagesSquare}
+          title="Select a conversation"
+          description="Choose an existing conversation or start a new one to begin chatting."
+          className="flex-1"
+        />
+      </div>
     );
   }
 
@@ -56,13 +61,27 @@ export function ChatPanel() {
     : mergedConversation.participant?.phone;
 
   return (
-    <section className="flex h-full flex-1 flex-col bg-surface-soft">
+    <section
+      className={cn(
+        "h-full flex-1 flex-col bg-surface-soft",
+        activeConversationId ? "flex w-full" : "hidden md:flex"
+      )}
+    >
       <header className="flex items-center justify-between gap-3 border-b border-ink/10 bg-white px-4 py-3 sm:px-6">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="md:hidden shrink-0 -ml-1.5"
+            onClick={() => dispatch(activeConversationSet(null))}
+            aria-label="Back to conversations"
+          >
+            <ArrowLeft className="h-5 w-5 text-ink" />
+          </Button>
           <UserAvatar name={title} isGroup={isGroup} />
-          <div>
-            <p className="text-sm font-semibold text-ink">{title}</p>
-            <p className="text-xs text-ink/50">{subtitle}</p>
+          <div className="min-w-0">
+            <p className="truncate text-sm font-semibold text-ink">{title}</p>
+            <p className="truncate text-xs text-ink/50">{subtitle}</p>
           </div>
         </div>
         {isGroup ? (

@@ -14,6 +14,7 @@ import { EmptyState } from "@/components/shared/EmptyState";
 import { ErrorState } from "@/components/shared/ErrorState";
 import { UserAvatar } from "@/components/shared/UserAvatar";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { disconnectSocket } from "@/socket/socketClient";
 
 interface ConversationSidebarProps {
@@ -38,7 +39,13 @@ export function ConversationSidebar({ isConnected }: ConversationSidebarProps) {
     : [];
 
   return (
-    <aside className="flex h-full w-full max-w-sm flex-col border-r border-ink/10 bg-white">
+    <aside
+      className={cn(
+        "h-full flex-col border-r border-ink/10 bg-white shrink-0",
+        "w-full md:w-80 lg:w-96 md:max-w-sm md:flex",
+        activeConversationId ? "hidden md:flex" : "flex"
+      )}
+    >
       <div className="flex items-center justify-between gap-3 border-b border-ink/10 px-4 py-4">
         <div className="flex items-center gap-3">
           <UserAvatar className="text-white" name={currentUser?.name ?? "?"} size="sm" />
