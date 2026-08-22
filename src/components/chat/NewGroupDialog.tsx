@@ -128,7 +128,7 @@ export function NewGroupDialog({ open, onOpenChange }: NewGroupDialogProps) {
 
         {error ? <p className="mt-2 text-xs text-red-500">Couldn't create the group. Try again.</p> : null}
 
-        <Button className="mt-4 w-full" disabled={!canCreate} onClick={handleCreate}>
+        <Button className="mt-4 w-full bg-accent rounded-lg text-white" disabled={!canCreate} onClick={handleCreate}>
           {isLoading ? "Creating..." : `Create group${selected.length ? ` (${selected.length + 1})` : ""}`}
         </Button>
       </DialogContent>

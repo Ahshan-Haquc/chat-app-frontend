@@ -26,7 +26,7 @@ export function ConversationRow({ conversation, currentUserId, isActive, onSelec
       <UserAvatar name={title} isGroup={isGroup} />
       <div className="min-w-0 flex-1">
         <div className="flex items-center justify-between gap-2">
-          <p className="truncate text-sm font-medium">{title}</p>
+          <p className={cn(`truncate text-sm font-medium`, isActive ? "text-white" : "text-ink")}>{title}</p>
           <span className={cn("shrink-0 text-xs", isActive ? "text-white/70" : "text-ink/40")}>
             {formatConversationTime(conversation.updatedAt)}
           </span>

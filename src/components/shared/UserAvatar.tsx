@@ -21,7 +21,7 @@ const sizeClasses = {
   lg: "h-14 w-14 text-lg"
 };
 
-export function UserAvatar({ name, isGroup, size = "md", className }: UserAvatarProps) {
+export function UserAvatar({ name, isGroup, size = "md", className="text-white" }: UserAvatarProps) {
   return (
     <Avatar className={cn(sizeClasses[size], className)}>
       <AvatarFallback className={cn(isGroup ? "bg-accent" : "bg-brand")}>
