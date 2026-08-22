@@ -84,7 +84,7 @@ export default function LoginPage() {
             </p>
           ) : null}
 
-          <Button type="submit" className="w-full" disabled={isLoading || !phone.trim() || !name.trim()}>
+          <Button type="submit" className="w-full py-1! bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors duration-200" disabled={isLoading || !phone.trim() || !name.trim()}>
             {isLoading ? "Signing in..." : "Continue"}
           </Button>
 

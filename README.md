@@ -2,6 +2,8 @@
 
 Next.js 14 (App Router) + TypeScript + TailwindCSS + shadcn-style UI + Redux Toolkit + RTK Query + Socket.io client.
 
+Live link : https://chatly-steel.vercel.app
+
 ## Setup
 
 ```
