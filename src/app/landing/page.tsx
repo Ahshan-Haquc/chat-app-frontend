@@ -21,6 +21,7 @@ import Hero from '@/components/landing/Hero';
 import MarqueeStrip from '@/components/landing/MarqueeStrip';
 import FeatureGrid from '@/components/landing/FeatureGrid';
 import TryItSection from '@/components/landing/TryItSection';
+import ClosingCta from '@/components/landing/ClosingCTA';
 
 // Font Setup
 const display = Space_Grotesk({ subsets: ['latin'], weight: ['500', '600', '700'], variable: '--font-display' });
