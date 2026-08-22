@@ -1,8 +1,10 @@
 # Chatly - Chat Application
 
-Next.js 14 (App Router) + TypeScript + TailwindCSS + shadcn-style UI + Redux Toolkit + RTK Query + Socket.io client.
+To implement this i used : Next.js 14 (App Router) + TypeScript + TailwindCSS + shadcn-style UI + Redux Toolkit + RTK Query + Socket.io client.
 
-Live link : https://chatly-steel.vercel.app
+* Live link : https://chatly-steel.vercel.app
+* API documentation location : chat-app-frontend/API_documentation.md
+* Part-3 location : chat-app-frontend/Thought-Process-Part-3.md
 
 ## Setup
 
