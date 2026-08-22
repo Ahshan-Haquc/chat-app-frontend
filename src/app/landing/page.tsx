@@ -16,6 +16,7 @@ import {
   Twitter,
   Linkedin
 } from 'lucide-react';
+import NavBar from '@/components/landing/NavBar';
 
 // Font Setup
 const display = Space_Grotesk({ subsets: ['latin'], weight: ['500', '600', '700'], variable: '--font-display' });
@@ -34,14 +35,6 @@ interface DemoMessage {
   from: 'me' | 'them';
   text: string;
 }
-
-// Data Constants
-const HERO_SCRIPT: HeroLine[] = [
-  { from: 'them', text: 'Did the client sign off on the mockups?', delay: 600 },
-  { from: 'me', text: 'Yes — just sent over the final files 🎉', delay: 1400 },
-  { from: 'them', text: 'Amazing, that was fast', delay: 1100 },
-  { from: 'me', text: 'Chatly makes it hard not to be', delay: 1300 }
-];
 
 const FEATURE_TAGS = [
   'Delivered instantly',
