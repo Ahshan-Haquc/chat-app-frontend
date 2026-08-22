@@ -41,7 +41,7 @@ export function ConversationSidebar({ isConnected }: ConversationSidebarProps) {
     <aside className="flex h-full w-full max-w-sm flex-col border-r border-ink/10 bg-white">
       <div className="flex items-center justify-between gap-3 border-b border-ink/10 px-4 py-4">
         <div className="flex items-center gap-3">
-          <UserAvatar name={currentUser?.name ?? "?"} size="sm" />
+          <UserAvatar className="text-white" name={currentUser?.name ?? "?"} size="sm" />
           <div>
             <p className="text-sm font-semibold text-ink">{currentUser?.name}</p>
             <p className="flex items-center gap-1 text-xs text-ink/40">
@@ -55,12 +55,12 @@ export function ConversationSidebar({ isConnected }: ConversationSidebarProps) {
         </Button>
       </div>
 
-      <div className="flex gap-2 px-4 py-3">
-        <Button className="flex-1" size="sm" onClick={() => setIsNewConversationOpen(true)}>
+      <div className="flex gap-2 px-4 py-3 ">
+        <Button className="flex-1 hover:text-accent duration-100" size="sm" onClick={() => setIsNewConversationOpen(true)}>
           <MessageSquarePlus size={16} />
           New chat
         </Button>
-        <Button className="flex-1" size="sm" variant="secondary" onClick={() => setIsNewGroupOpen(true)}>
+        <Button className="flex-1 hover:text-accent duration-100" size="sm" variant="secondary" onClick={() => setIsNewGroupOpen(true)}>
           <Users size={16} />
           New group
         </Button>

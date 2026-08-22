@@ -63,7 +63,7 @@ export function NewGroupDialog({ open, onOpenChange }: NewGroupDialogProps) {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent>
+      <DialogContent className="bg-white">
         <DialogHeader>
           <DialogTitle>Create a group</DialogTitle>
           <DialogDescription>Groups need at least three members including you.</DialogDescription>

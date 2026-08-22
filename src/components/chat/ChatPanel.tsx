@@ -10,7 +10,7 @@ import { MessageList } from "@/components/chat/MessageList";
 import { MessageInput } from "@/components/chat/MessageInput";
 import { GroupInfoDialog } from "@/components/chat/GroupInfoDialog";
 import { Button } from "@/components/ui/button";
-import { getConversationTitle, type ConversationListItem } from "@/lib/types";
+import { getConversationTitle, type ConversationListItem } from "@/types";
 
 export function ChatPanel() {
   const activeConversationId = useAppSelector((state) => state.ui.activeConversationId);

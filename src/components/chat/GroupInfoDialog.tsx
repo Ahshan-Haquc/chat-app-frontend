@@ -53,16 +53,16 @@ export function GroupInfoDialog({ open, onOpenChange, conversation }: GroupInfoD
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-lg">
+      <DialogContent className="max-w-lg bg-white">
         <DialogHeader>
           <DialogTitle>Group details</DialogTitle>
           <DialogDescription>{conversation.participants?.length ?? 0} members</DialogDescription>
         </DialogHeader>
 
-        <div className="flex gap-2">
+        <div className="flex items-center gap-2">
           <Input value={name} onChange={(event) => setName(event.target.value)} disabled={!isAdmin} />
           {isAdmin ? (
-            <Button size="sm" onClick={handleRename} disabled={isRenaming}>
+            <Button size="sm" onClick={handleRename} disabled={isRenaming} className={`bg-accent text-white rounded-lg py-1 hover:bg-black`}>
               Save
             </Button>
           ) : null}

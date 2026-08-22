@@ -20,7 +20,7 @@ export function ConversationRow({ conversation, currentUserId, isActive, onSelec
       onClick={onSelect}
       className={cn(
         "flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left transition-colors",
-        isActive ? "bg-brand text-white" : "text-ink hover:bg-surface"
+        isActive ? "bg-brand text-white!" : "text-ink hover:bg-surface"
       )}
     >
       <UserAvatar name={title} isGroup={isGroup} />

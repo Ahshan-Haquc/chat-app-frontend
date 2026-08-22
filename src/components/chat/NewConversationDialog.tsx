@@ -47,7 +47,7 @@ export function NewConversationDialog({ open, onOpenChange }: NewConversationDia
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent>
+      <DialogContent className="bg-white">
         <DialogHeader>
           <DialogTitle>Start a conversation</DialogTitle>
           <DialogDescription>Search by name or phone number.</DialogDescription>
