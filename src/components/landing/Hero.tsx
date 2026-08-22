@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import HeroMockup from "./HeroMockup";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -26,10 +27,10 @@ export default function Hero() {
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
-            <a href="/signup" className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5 hover:bg-accent-dark hover:shadow-accent/40">
+            <Link href="/login" className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5 hover:bg-accent-dark hover:shadow-accent/40">
               Open Chatly
               <ArrowRight className="h-4 w-4" />
-            </a>
+            </Link>
             <a href="#features" className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-7 py-3.5 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-50 hover:text-slate-900">
               See how it works
             </a>
