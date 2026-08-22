@@ -1,4 +1,4 @@
-# Chatly — Chat Application (Part 1)
+# Chatly - Chat Application
 
 Next.js 14 (App Router) + TypeScript + TailwindCSS + shadcn-style UI + Redux Toolkit + RTK Query + Socket.io client.
 
