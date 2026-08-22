@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import type { RootState } from "@/redux/store";
-import { loggedOut } from "@/redux/slices/authSlice";
+import { loggedOut } from "@/redux/slice/authSlice";
 
 const rawBaseQuery = fetchBaseQuery({
   baseUrl: process.env.NEXT_PUBLIC_API_BASE_URL,
