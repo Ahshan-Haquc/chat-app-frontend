@@ -52,7 +52,7 @@ export default function TryItSection() {
       <div className="mx-auto max-w-7xl px-6 py-24 lg:py-32">
         <div className="grid gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
+            <span className="text-sm font-bold uppercase tracking-wider text-accent">
               No account needed
             </span>
             <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
@@ -61,8 +61,8 @@ export default function TryItSection() {
             <p className="mt-6 text-lg leading-relaxed text-slate-600 max-w-md">
               This is a stand-in for the real thing. Type a message below and this thread replies the way a live one would: instantly, with absolutely nothing to refresh.
             </p>
-            <div className="mt-8 flex items-center gap-3 rounded-2xl bg-blue-50/50 p-4 text-sm font-medium text-slate-700 border border-blue-100">
-              <ShieldCheck className="h-5 w-5 text-blue-600" />
+            <div className="mt-8 flex items-center gap-3 rounded-2xl bg-accent/5 p-4 text-sm font-medium text-slate-700 border border-accent/10">
+              <ShieldCheck className="h-5 w-5 text-accent" />
               Nothing you type here leaves this browser tab.
             </div>
           </div>
@@ -79,7 +79,7 @@ export default function TryItSection() {
                   <div
                     className={`max-w-[85%] px-4 py-2.5 text-[15px] leading-relaxed shadow-sm ${
                       message.from === 'me'
-                        ? 'rounded-2xl rounded-br-sm bg-blue-600 text-white'
+                        ? 'rounded-2xl rounded-br-sm bg-accent text-white'
                         : 'rounded-2xl rounded-bl-sm border border-slate-100 bg-slate-50 text-slate-800'
                     }`}
                   >
@@ -103,12 +103,12 @@ export default function TryItSection() {
                 value={draft}
                 onChange={(e) => setDraft(e.target.value)}
                 placeholder="Type your message here..."
-                className="flex-1 rounded-full border border-slate-200 bg-white px-5 py-3 text-[15px] text-slate-900 shadow-sm outline-none transition-shadow focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
+                className="flex-1 rounded-full border border-slate-200 bg-white px-5 py-3 text-[15px] text-slate-900 shadow-sm outline-none transition-shadow focus:border-accent focus:ring-2 focus:ring-accent/20"
               />
               <button
                 type="submit"
                 disabled={!draft.trim()}
-                className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white shadow-md transition-transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:hover:scale-100"
+                className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent text-white shadow-md transition-transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:hover:scale-100"
               >
                 <Send className="h-5 w-5 ml-0.5" />
               </button>

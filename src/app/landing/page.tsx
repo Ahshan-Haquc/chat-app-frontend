@@ -22,6 +22,7 @@ import MarqueeStrip from '@/components/landing/MarqueeStrip';
 import FeatureGrid from '@/components/landing/FeatureGrid';
 import TryItSection from '@/components/landing/TryItSection';
 import ClosingCta from '@/components/landing/ClosingCTA';
+import Footer from '@/components/landing/Footer';
 
 // Font Setup
 const display = Space_Grotesk({ subsets: ['latin'], weight: ['500', '600', '700'], variable: '--font-display' });
@@ -39,7 +40,7 @@ interface HeroLine {
 // Main Page Component
 export default function LandingPage() {
   return (
-    <div className={`${display.variable} ${body.variable} ${mono.variable} font-body bg-slate-50 text-slate-900 min-h-screen selection:bg-blue-200 selection:text-blue-900`}>
+    <div className={`${display.variable} ${body.variable} ${mono.variable} font-body bg-slate-50 text-slate-900 min-h-screen selection:bg-accent/20 selection:text-accent-dark`}>
       <NavBar />
       <main>
         <Hero />

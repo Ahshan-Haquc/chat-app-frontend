@@ -35,7 +35,7 @@ export default function MarqueeStrip() {
             key={i}
             className="flex items-center gap-2 whitespace-nowrap rounded-full bg-slate-50 border border-slate-200 px-5 py-2 text-sm font-medium text-slate-700 font-mono"
           >
-            <Check className="h-4 w-4 text-blue-600" />
+            <Check className="h-4 w-4 text-accent" />
             {tag}
           </span>
         ))}

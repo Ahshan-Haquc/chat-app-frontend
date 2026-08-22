@@ -62,12 +62,12 @@ export default function HeroMockup() {
 
   return (
     <div className="relative mx-auto w-full max-w-sm lg:max-w-md">
-      <div className="absolute -inset-4 -z-10 rounded-[2.5rem] bg-gradient-to-tr from-blue-100 to-indigo-50 opacity-60 blur-2xl" />
+      <div className="absolute -inset-4 -z-10 rounded-[2.5rem] bg-gradient-to-tr from-accent/20 to-indigo-50/10 opacity-60 blur-2xl" />
       
       <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-2xl shadow-slate-900/10">
         {/* Chat Header */}
         <div className="flex items-center gap-3 border-b border-slate-100 bg-white/50 px-5 py-4 backdrop-blur-md">
-          <div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-blue-600 text-sm font-semibold text-white shadow-sm">
+          <div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-accent-light to-accent text-sm font-semibold text-white shadow-sm">
             RM
             <span className="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full border-2 border-white bg-green-500" />
           </div>
@@ -84,7 +84,7 @@ export default function HeroMockup() {
               <div
                 className={`max-w-[85%] px-4 py-2.5 text-[15px] leading-relaxed shadow-sm animate-in fade-in slide-in-from-bottom-2 duration-300 ${
                   line.from === 'me'
-                    ? 'rounded-2xl rounded-br-sm bg-blue-600 text-white'
+                    ? 'rounded-2xl rounded-br-sm bg-accent text-white'
                     : 'rounded-2xl rounded-bl-sm border border-slate-100 bg-white text-slate-800'
                 }`}
               >
@@ -109,7 +109,7 @@ export default function HeroMockup() {
           <div className="flex-1 rounded-full border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm text-slate-400">
             Write a message…
           </div>
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white shadow-sm">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent text-white shadow-sm">
             <Send className="h-4 w-4 ml-0.5" />
           </div>
         </div>

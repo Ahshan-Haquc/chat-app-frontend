@@ -40,7 +40,7 @@ export default function FeatureGrid() {
   return (
     <section id="features" className="mx-auto max-w-7xl px-6 py-24 lg:py-32">
       <div className="max-w-2xl">
-        <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
+        <span className="text-sm font-bold uppercase tracking-wider text-accent">
           Built for real conversations
         </span>
         <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
@@ -54,7 +54,7 @@ export default function FeatureGrid() {
             key={feature.title}
             className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/50"
           >
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 transition-colors group-hover:bg-blue-600 group-hover:text-white">
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/10 text-accent transition-colors group-hover:bg-accent group-hover:text-white">
               <feature.icon className="h-6 w-6" />
             </div>
             <h3 className="mt-6 text-xl font-semibold text-slate-900">

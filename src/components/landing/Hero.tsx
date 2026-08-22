@@ -11,7 +11,7 @@ export default function Hero() {
 
       <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-8">
         <div className="max-w-2xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50/50 px-3 py-1.5 text-xs font-medium text-blue-700 font-mono mb-8">
+          <div className="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/5 px-3 py-1.5 text-xs font-medium text-accent-dark font-mono mb-8">
             <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse"></span>
             // zero latency messaging
           </div>
@@ -26,7 +26,7 @@ export default function Hero() {
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
-            <a href="/signup" className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-accent/40">
+            <a href="/signup" className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5 hover:bg-accent-dark hover:shadow-accent/40">
               Open Chatly
               <ArrowRight className="h-4 w-4" />
             </a>
