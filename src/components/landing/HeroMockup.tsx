@@ -1,7 +1,7 @@
 import { Send } from "lucide-react";
 import { useEffect, useState } from "react";
 
-function Dot({ delay }: { delay: number }) {
+export function Dot({ delay }: { delay: number }) {
   return (
     <span
       className="h-1.5 w-1.5 animate-bounce rounded-full bg-slate-400"

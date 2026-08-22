@@ -19,6 +19,8 @@ import {
 import NavBar from '@/components/landing/NavBar';
 import Hero from '@/components/landing/Hero';
 import MarqueeStrip from '@/components/landing/MarqueeStrip';
+import FeatureGrid from '@/components/landing/FeatureGrid';
+import TryItSection from '@/components/landing/TryItSection';
 
 // Font Setup
 const display = Space_Grotesk({ subsets: ['latin'], weight: ['500', '600', '700'], variable: '--font-display' });
@@ -32,21 +34,6 @@ interface HeroLine {
   delay: number;
 }
 
-interface DemoMessage {
-  id: number;
-  from: 'me' | 'them';
-  text: string;
-}
-
-
-
-
-const AUTO_REPLIES = [
-  'Got it, loud and clear.',
-  'Nice — that arrived instantly.',
-  'No refresh, no delay. Just like that.',
-  'This is the live version, by the way.'
-];
 
 // Main Page Component
 export default function LandingPage() {
