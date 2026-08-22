@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function ClosingCta() {
   return (
@@ -17,13 +18,13 @@ export default function ClosingCta() {
           <p className="mt-6 max-w-xl text-lg text-slate-300">
             Sign up in seconds. Enter a phone number and a name — new numbers start a fresh account automatically, no passwords required.
           </p>
-          <a
+          <Link
             href="/login"
             className="mt-10 inline-flex items-center gap-2 rounded-full bg-accent px-8 py-4 text-base font-semibold text-white shadow-xl shadow-accent/20 transition-all hover:-translate-y-1 hover:bg-accent-dark"
           >
             Start using Chatly for free
             <ArrowRight className="h-5 w-5" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import { MessageCircle } from "lucide-react";
+import Link from "next/link";
 
 export default function NavBar() {
   return (
@@ -19,12 +20,12 @@ export default function NavBar() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <a href="/login" className="hidden text-sm font-medium text-slate-600 hover:text-slate-900 sm:block transition-colors">
+          <Link href="/login" className="hidden text-sm font-medium text-slate-600 hover:text-slate-900 sm:block transition-colors">
             Log in
-          </a>
-          <a href="/login" className="rounded-full bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-slate-800 hover:shadow-md">
+          </Link>
+          <Link href="/login" className="rounded-full bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-slate-800 hover:shadow-md">
             Start Chatting
-          </a>
+          </Link>
         </div>
       </div>
     </header>
